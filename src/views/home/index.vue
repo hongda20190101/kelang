@@ -45,6 +45,7 @@ export default {
         this.activeIndex = id ? `/home/profile?id=${id}` : '/home/';
         this.showMenu = !navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
         this.showFooter = true;
+        document.getElementsByClassName('el-main')[0].style.minHeight = `${window.innerHeight - 62}px`;
     },
     computed: {
         isMobile () {

@@ -1,19 +1,19 @@
 <template>
     <el-row :type="!isMobile ? 'flex' : ''" class="row-bg" justify="center">
         <el-col :xs="24" :sm="18" :md="14" :lg="12" :xl="12" class="content">
-            <el-menu mode="vertical" router :default-active="active" v-if="!isMobile && showMenu" class="listMenu">
+            <el-menu mode="vertical" router :default-active="active" v-if="!isMobile && showMenu" class="listMenu" data-aos='fade-right'>
                 <el-menu-item index="/home/profile?id=scientific">科研转化服务</el-menu-item>
                 <el-menu-item index="/home/profile?id=project">项目申报服务</el-menu-item>
                 <el-menu-item index="/home/profile?id=consultation">医疗器械临床试验咨询服务</el-menu-item>
                 <el-menu-item index="/home/profile?id=medical">医疗器械注册体系咨询服务</el-menu-item>
             </el-menu>
             <div v-for="item in data" :key="item.title" class="item">
-                <h3>{{item.title}}</h3>
-                <img :src="publicPath + img" class="image" v-for="(img, index) in item.image" :key="img"/>
-                <div :class="active != '/home/profile?id=contactUs' ? 'text' : 'ctext'" v-html="item.content" v-if="item.content"></div>
-                <div v-html="item.multiContent" v-if="item.multiContent"></div>
-                <div v-if="item.persons">
-                    <el-row v-for="personItems in item.persons" :type="isMobile ? '' : 'flex'" class="row-bg" justify="center">
+                <h3 data-aos='fade-up'>{{item.title}}</h3>
+                <img :src="publicPath + img" class="image" v-for="img in item.image" :key="img" data-aos='fade-up'/>
+                <div :class="active != '/home/profile?id=contactUs' ? 'text' : 'ctext'" v-html="item.content" v-if="item.content" data-aos='fade-up'></div>
+                <div v-html="item.multiContent" v-if="item.multiContent" data-aos='fade-up'></div>
+                <div v-if="item.persons" data-aos='fade-up'>
+                    <el-row v-for="personItems in item.persons" :key="personItems" :type="isMobile ? '' : 'flex'" class="row-bg" justify="center">
                         <el-col v-for="person in personItems.person" :key="person.name" :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :class="person.showDetail ? 'index-9999' : ''">
                             <div class="introduce" :class="person.showDetail ? 'person-hover' : ''" @mouseover="showDetail(person)" @mouseout="hideDetail(person)">
                                 <div class="introduce-wraper">
@@ -38,7 +38,6 @@
 </template>
 <script>
 import axios from 'axios'
-
 export default {
     data () {
         return {
@@ -64,11 +63,9 @@ export default {
     },
     methods: {
         showDetail (person) {
-            console.log("aa")
             person.showDetail = true;
         },
         hideDetail (person) {
-            console.log("bb")
             person.showDetail = false;
         }
     },
@@ -88,13 +85,15 @@ export default {
 }
 </script>
 <style scoped>
+.row-bg {
+    overflow: hidden;
+}
 .content {
     box-sizing: border-box;
     padding: 20px;
 }
 .content .image {
     width: 100%;
-    animation-name: fadeInUp;
 }
 .content h3 {
     margin: 0;
