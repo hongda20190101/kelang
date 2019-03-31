@@ -1,32 +1,30 @@
 <template>
     <el-row :type="!isMobile ? 'flex' : ''" class="row-bg" justify="center">
         <el-col :xs="24" :sm="18" :md="14" :lg="12" :xl="12" class="content">
-            <el-menu mode="vertical" router :default-active="active" v-if="!isMobile && showMenu" class="listMenu" data-aos='fade-right'>
+            <el-menu mode="vertical" router :default-active="active" v-if="!isMobile && showMenu" class="listMenu" :data-aos='isLowerIE10 ? "fade-right" : ""'>
                 <el-menu-item index="/home/profile?id=scientific">科研转化服务</el-menu-item>
                 <el-menu-item index="/home/profile?id=project">项目申报服务</el-menu-item>
                 <el-menu-item index="/home/profile?id=consultation">医疗器械临床试验咨询服务</el-menu-item>
                 <el-menu-item index="/home/profile?id=medical">医疗器械注册体系咨询服务</el-menu-item>
             </el-menu>
             <div v-for="item in data" :key="item.title" class="item">
-                <h3 data-aos='fade-up'>{{item.title}}</h3>
-                <img :src="publicPath + img" class="image" v-for="img in item.image" :key="img" data-aos='fade-up'/>
-                <div :class="active != '/home/profile?id=contactUs' ? 'text' : 'ctext'" v-html="item.content" v-if="item.content" data-aos='fade-up'></div>
-                <div v-html="item.multiContent" v-if="item.multiContent" data-aos='fade-up'></div>
-                <div v-if="item.persons" data-aos='fade-up'>
+                <h3 :data-aos='isLowerIE10 ? "fade-up" : ""'>{{item.title}}</h3>
+                <img :src="publicPath + img" class="image" v-for="img in item.image" :key="img" :data-aos='isLowerIE10 ? "fade-up" : ""'/>
+                <div :class="active != '/home/profile?id=contactUs' ? 'text' : 'ctext'" v-html="item.content" v-if="item.content" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
+                <div v-html="item.multiContent" v-if="item.multiContent" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
+                <div v-if="item.persons" :data-aos='isLowerIE10 ? "fade-up" : ""'>
                     <el-row v-for="personItems in item.persons" :key="personItems" :type="isMobile ? '' : 'flex'" class="row-bg" justify="center">
-                        <el-col v-for="person in personItems.person" :key="person.name" :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :class="person.showDetail ? 'index-9999' : ''">
-                            <div class="introduce" :class="person.showDetail ? 'person-hover' : ''" @mouseover="showDetail(person)" @mouseout="hideDetail(person)">
-                                <div class="introduce-wraper">
-                                    <div class="img-120">
-                                        <img class="img-w100" :src="person.image">
-                                    </div>
-                                    <p class="person-name">{{person.name}}</p>
-                                    <p class="line-bottom"></p>
-                                    <p class="person-job">{{person.job}}</p>
-                                    <p class="job-describe">{{person.describe}}</p>
-                                    <div class="persion-detail" v-show="person.showDetail">
-                                        <div class="detail-more" v-html="person.detail"></div>
-                                    </div>
+                        <el-col v-for="person in personItems.person" :key="person.name" :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
+                            <div class="introduce">
+                                <div class="img-120">
+                                    <img class="img-w100" :src="person.image">
+                                </div>
+                                <p class="person-name">{{person.name}}</p>
+                                <p class="line-bottom"></p>
+                                <p class="person-job">{{person.job}}</p>
+                                <p class="job-describe">{{person.describe}}</p>
+                                <div class="persion-detail">
+                                    <div class="detail-more" v-html="person.detail"></div>
                                 </div>
                             </div>
                         </el-col>
@@ -61,14 +59,6 @@ export default {
         this.publicPath = process.env.BASE_URL;
         this.showMenu = ['scientific', 'project', 'medical', 'consultation'].indexOf(id) > -1;
     },
-    methods: {
-        showDetail (person) {
-            person.showDetail = true;
-        },
-        hideDetail (person) {
-            person.showDetail = false;
-        }
-    },
     watch: {
         '$route' (to) {
             let id = to.query.id;
@@ -80,6 +70,11 @@ export default {
     computed: {
         isMobile () {
             return navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
+        },
+        isLowerIE10 () {
+            const IE = 'ActiveXObject' in this; // Edge 不是 IE
+            const documentMode = document.documentMode || (IE ? 0 : 99);
+            return documentMode < 10;
         }
     }
 }
@@ -94,6 +89,7 @@ export default {
 }
 .content .image {
     width: 100%;
+    height: 100%;
 }
 .content h3 {
     margin: 0;
@@ -132,18 +128,13 @@ export default {
     margin-bottom: 65px;
     position: relative;
     background: #fff;
-    height: 250px;
-    z-index: 1;
-}
-.introduce-wraper {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    padding-top: 20px;
-    z-index: 3;
-    background: #fff;
     text-align: center;
+}
+.introduce:hover {
+    z-index: 20;
+}
+.introduce:hover .persion-detail {
+    display: block;
 }
 .introduce .img-120 {
     width: 120px;
@@ -190,11 +181,11 @@ export default {
     padding: 0 15px;
     text-align: left;
 }
+.introduce .persion-detail {
+    display: none;
+}
 .person-hover{
     border: 1px solid #F5F5F5;
-}
-.index-9999 {
-    z-index: 9999;
 }
 .item {
     padding-bottom: 25px;

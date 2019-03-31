@@ -1,8 +1,8 @@
 <template>
     <div class="main">
         <div class="content">
-            <h2 data-aos='fade-up'>广州科琅医疗科技<br v-if="isMobile" />有限公司</h2>
-            <div class="buttons" data-aos='fade-up'>
+            <h2 :data-aos='isLowerIE10 ? "fade-up" : ""'>广州科琅医疗科技<br v-if="isMobile" />有限公司</h2>
+            <div class="buttons" :data-aos='isLowerIE10 ? "fade-up" : ""'>
                 <router-link to="/home/profile?id=scientific">
                     <el-button class="">科研转化和项目申报服务</el-button>
                 </router-link>
@@ -46,7 +46,7 @@
     width: 80%;
     background: none;
     color: #fff;
-    margin: 0.5em;
+    margin: 1em;
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
@@ -69,7 +69,7 @@
       top: 20%;
   }
   .main .content .buttons {
-      width: 1000px;
+      width: 1200px;
       margin: 0 auto;
       padding-top: 20px;
   }
@@ -83,6 +83,11 @@ export default {
     computed: {
         isMobile () {
             return navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
+        },
+        isLowerIE10 () {
+            const IE = 'ActiveXObject' in this; // Edge 不是 IE
+            const documentMode = document.documentMode || (IE ? 0 : 99);
+            return documentMode < 10;
         }
     }
 }

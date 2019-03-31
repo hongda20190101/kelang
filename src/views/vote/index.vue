@@ -31,7 +31,7 @@ export default {
     // axios
     //   .get('./config/questions.json')
     //   .then(response => (this.datas = response.data))
-    var input = document.getElementById('input');
+    // var input = document.getElementById('input');
     // function picToBlob () {
     //   PDFJS.getPdf(input.files[0], function getPdfHelloWorld(data) {
     //     var pdf = new PDFJS.PDFDoc(data);

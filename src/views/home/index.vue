@@ -8,7 +8,7 @@
                     <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
                         <el-menu-item index="/home/">首页</el-menu-item>
                         <el-menu-item index="/home/profile?id=company">公司介绍</el-menu-item>
-                        <el-submenu index="3">
+                        <el-submenu>
                             <template slot="title">项目介绍</template>
                             <el-menu-item index="/home/profile?id=scientific">科研转化服务</el-menu-item>
                             <el-menu-item index="/home/profile?id=project">项目申报服务</el-menu-item>
@@ -24,11 +24,9 @@
         <el-main>
             <router-view></router-view>
         </el-main>
-        <transition name="el-zoom-in-bottom">
-            <el-footer height="auto" v-show="showFooter">
-                <p>科琅医疗<br>苏ICP备15008XXX号</p>
-            </el-footer>
-        </transition>
+        <el-footer height="auto" v-show="showFooter">
+            <p>科琅医疗<br>苏ICP备15008XXX号</p>
+        </el-footer>
     </el-container>
 </template>
 <script>
