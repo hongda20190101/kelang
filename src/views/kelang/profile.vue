@@ -2,15 +2,19 @@
     <el-row :type="!isMobile ? 'flex' : ''" class="row-bg" justify="center">
         <el-col :xs="24" :sm="18" :md="14" :lg="12" :xl="12" class="content">
             <el-menu mode="vertical" router :default-active="active" v-if="!isMobile && showMenu" class="listMenu" :data-aos='isLowerIE10 ? "fade-right" : ""'>
-                <el-menu-item index="/home/profile?id=scientific">科研转化服务</el-menu-item>
-                <el-menu-item index="/home/profile?id=project">项目申报服务</el-menu-item>
-                <el-menu-item index="/home/profile?id=consultation">医疗器械临床试验咨询服务</el-menu-item>
-                <el-menu-item index="/home/profile?id=medical">医疗器械注册体系咨询服务</el-menu-item>
+                <el-menu-item index="/kelang/profile?id=scientific">科研转化服务</el-menu-item>
+                <el-menu-item index="/kelang/profile?id=project">项目申报服务</el-menu-item>
+                <el-menu-item index="/kelang/profile?id=consultation">医疗器械临床试验咨询服务</el-menu-item>
+                <el-menu-item index="/kelang/profile?id=medical">医疗器械注册体系咨询服务</el-menu-item>
+                <div class="listContact">
+                    <h4 class="listContactTitle">联系方式</h4>
+                    <p v-for="contactInfo in contactInfos" :key="contactInfo" class="listContactInfoItem">{{contactInfo}}</p>
+                </div>
             </el-menu>
             <div v-for="item in data" :key="item.title" class="item">
                 <h3 :data-aos='isLowerIE10 ? "fade-up" : ""'>{{item.title}}</h3>
                 <img :src="publicPath + img" class="image" v-for="img in item.image" :key="img" :data-aos='isLowerIE10 ? "fade-up" : ""'/>
-                <div :class="active != '/home/profile?id=contactUs' ? 'text' : 'ctext'" v-html="item.content" v-if="item.content" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
+                <div :class="active != '/kelang/profile?id=contactUs' ? 'text' : 'ctext'" v-html="item.content" v-if="item.content" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
                 <div v-html="item.multiContent" v-if="item.multiContent" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
                 <div v-if="item.persons" :data-aos='isLowerIE10 ? "fade-up" : ""'>
                     <el-row v-for="personItems in item.persons" :key="personItems" :type="isMobile ? '' : 'flex'" class="row-bg" justify="center">
@@ -44,18 +48,20 @@ export default {
             active: null,
             id: null,
             publicPath: null,
-            showMenu: false
+            showMenu: false,
+            contactInfos: []
         }
     },
     mounted () {
         axios
-        .get('./config/home.json')
+        .get('./config/kelang.json')
         .then(response => {
             this.datas = response.data;
             this.data = this.datas[this.$route.query.id];
+            this.contactInfos = this.datas.contacts[this.$route.query.id]
         });
         let id = this.$route.query.id || '';
-        this.active = `/home/profile?id=${id}`;
+        this.active = `/kelang/profile?id=${id}`;
         this.publicPath = process.env.BASE_URL;
         this.showMenu = ['scientific', 'project', 'medical', 'consultation'].indexOf(id) > -1;
     },
@@ -63,8 +69,9 @@ export default {
         '$route' (to) {
             let id = to.query.id;
             this.data = this.datas[id];
-            this.active = `/home/profile?id=${id}`;
+            this.active = `/kelang/profile?id=${id}`;
             this.showMenu = ['scientific', 'project', 'medical', 'consultation'].indexOf(id) > -1;
+            this.contactInfos = this.datas.contacts[id]
         }
     },
     computed: {
@@ -110,8 +117,8 @@ export default {
     margin-bottom: 30px;
 }
 .listMenu {
-    position: absolute;
-    top: 20px;
+    position: fixed;
+    top: 11%;
     width: 200px;
     margin-left: -220px;
 }
@@ -189,5 +196,19 @@ export default {
 }
 .item {
     padding-bottom: 25px;
+}
+.listContact {
+    margin: 20px 0;
+    color: #409eff;
+    border: 1px solid rgba(64,158,255,.2);
+    background-color: rgba(64,158,255,.1);
+    padding: 10px;
+    margin-left: -40px;
+}
+.listContact h4, .listContact p {
+    line-height: 2;
+}
+.listContact .listContactInfoItem{
+    font-size: 12px;
 }
 </style>

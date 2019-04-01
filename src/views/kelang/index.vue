@@ -2,21 +2,21 @@
     <el-container>
         <el-header height="auto">
             <div class="header">
-                <img src="../../assets/logo.png" />
+                <img :src="publicPath + 'images/kelang/logo.png'" />
                 <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
                 <el-collapse-transition>
                     <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
-                        <el-menu-item index="/home/">首页</el-menu-item>
-                        <el-menu-item index="/home/profile?id=company">公司介绍</el-menu-item>
+                        <el-menu-item index="/kelang/">首页</el-menu-item>
+                        <el-menu-item index="/kelang/profile?id=company">公司介绍</el-menu-item>
                         <el-submenu>
                             <template slot="title">项目介绍</template>
-                            <el-menu-item index="/home/profile?id=scientific">科研转化服务</el-menu-item>
-                            <el-menu-item index="/home/profile?id=project">项目申报服务</el-menu-item>
-                            <el-menu-item index="/home/profile?id=medical">医疗器械注册体系咨询服务</el-menu-item>
-                            <el-menu-item index="/home/profile?id=consultation">医疗器械临床试验咨询服务</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=scientific">科研转化服务</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=project">项目申报服务</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=medical">医疗器械注册体系技术服务</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=consultation">医疗器械临床试验技术服务</el-menu-item>
                         </el-submenu>
-                        <el-menu-item index="/home/profile?id=teamResources">团队资源</el-menu-item>
-                        <el-menu-item index="/home/profile?id=contactUs">联系我们</el-menu-item>
+                        <el-menu-item index="/kelang/profile?id=teamResources">团队资源</el-menu-item>
+                        <el-menu-item index="/kelang/profile?id=contactUs">联系我们</el-menu-item>
                     </el-menu>
                 </el-collapse-transition>
             </div>
@@ -24,7 +24,7 @@
         <el-main>
             <router-view></router-view>
         </el-main>
-        <el-footer height="auto" v-show="showFooter">
+        <el-footer height="auto">
             <p>科琅医疗<br>苏ICP备15008XXX号</p>
         </el-footer>
     </el-container>
@@ -35,14 +35,14 @@ export default {
         return {
             activeIndex: null,
             showMenu: null,
-            showFooter: false
+            publicPath: null
         }
     },
     mounted () {
         let id = this.$route.query.id || '';
-        this.activeIndex = id ? `/home/profile?id=${id}` : '/home/';
+        this.activeIndex = id ? `/kelang/profile?id=${id}` : '/kelang/';
+        this.publicPath = process.env.BASE_URL;
         this.showMenu = !navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
-        this.showFooter = true;
         document.getElementsByClassName('el-main')[0].style.minHeight = `${window.innerHeight - 62}px`;
     },
     computed: {
@@ -52,30 +52,29 @@ export default {
     }
 }
 </script>
-<style scpoed>
+<style lang="less">
 .el-header, .el-main {
     background: #fff;
     padding: 0;
 }
 .el-header {
     border-bottom: solid 1px #e6e6e6;
-}
-.header {
-    max-width: 1024px;
-    margin: 0 auto;
-}
-.header .el-button {
-    float: right;
-    margin: 7px;
-    padding: 12px;
-}
-.header img {
-    height: 55px;
-}
-.header .el-menu.el-menu--horizontal {
-    display: inline-block;
-    float: right;
-    border-bottom: none;
+    .header {
+        max-width: 1024px;
+        margin: 0 auto;
+        img {
+            height: 55px;
+        }
+        .el-button {
+            float: right;
+            margin: 7px;
+            padding: 12px;
+        }
+        .el-menu.el-menu--horizontal {
+            float: right;
+            border-bottom: none;
+        }
+    }
 }
 .el-footer {
     text-align: center;

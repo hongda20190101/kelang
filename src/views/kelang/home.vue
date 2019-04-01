@@ -1,16 +1,16 @@
 <template>
-    <div class="main">
+    <div class="main" :style="'background:url(' + background + ')'">
         <div class="content">
             <h2 :data-aos='isLowerIE10 ? "fade-up" : ""'>广州科琅医疗科技<br v-if="isMobile" />有限公司</h2>
             <div class="buttons" :data-aos='isLowerIE10 ? "fade-up" : ""'>
-                <router-link to="/home/profile?id=scientific">
+                <router-link to="/kelang/profile?id=scientific">
                     <el-button class="">科研转化和项目申报服务</el-button>
                 </router-link>
-                <router-link to="/home/profile?id=consultation">
-                    <el-button class="">医疗器械临床试验咨询服务</el-button>
+                <router-link to="/kelang/profile?id=consultation">
+                    <el-button class="">医疗器械临床试验技术服务</el-button>
                 </router-link>
-                <router-link to="/home/profile?id=medical">
-                    <el-button class="">注册体系咨询服务</el-button>
+                <router-link to="/kelang/profile?id=medical">
+                    <el-button class="">注册体系技术服务</el-button>
                 </router-link>
             </div>
         </div>
@@ -21,7 +21,8 @@
 .main {
     width: 100%;
     height: 100%;
-    background: url("../../assets/background_1.jpg") center no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     position: relative;
 }
@@ -77,7 +78,13 @@
 </style>
 <script>
 export default {
+    data () {
+        return {
+            background: null,
+        }
+    },    
     mounted () {
+        this.background = `${process.env.BASE_URL}images/kelang/background.jpg`;
         document.getElementsByClassName('main')[0].style.height = `${window.innerHeight - 62}px`;
     },
     computed: {

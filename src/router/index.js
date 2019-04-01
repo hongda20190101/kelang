@@ -2,25 +2,38 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-import home from '../views/home';
-import carousel from '../views/home/carousel';
-import profile from '../views/home/profile';
+import kelang from '../views/kelang/';
+import kelangHome from '../views/kelang/home';
+import profile from '../views/kelang/profile';
+import biya from '../views/biya';
+import biyaHome from '../views/biya/home';
+import biyaInfo from '../views/biya/info';
 import vote from '../views/vote';
 
 
 const routes = [{
     path: '/',
-    redirect: '/home/',
+    redirect: '/kelang/',
 }, { 
-    path: '/home',
-    component: home,
+    path: '/kelang',
+    component: kelang,
     children: [{
         path: '/',
-        component: carousel,
+        component: kelangHome,
     }, {
         path: 'profile',
         component: profile
     }] 
+}, {
+    path: '/biya',
+    component: biya,
+    children: [{
+        path: '/',
+        component: biyaHome,
+    }, {
+        path: 'info',
+        component: biyaInfo
+    }]
 }, { 
     path: '/vote',
     component: vote 

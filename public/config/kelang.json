@@ -1,31 +1,44 @@
 {
     "company": [{
         "title": "公司简介",
-        "image": ["images/company_1.jpg"],
+        "image": ["images/kelang/company_1.jpg"],
         "content": "<p>广州科琅医疗科技有限公司隶属于中山大学达安基因股份有限公司（股票代码002030）生态圈企业，成立于2014年。</p><p>科琅医疗专注于大健康领域成果转化领域，搭建大健康领域成果转化众包平台，为广大企业、高校、科研机构提供大健康行业，特别是医疗器械领域的科研成果转化、临床试验注册、政府项目申报三大板块服务。包含了技术转移/转化、临床试验、产品注册、生产经营许可、开放实验室、项目申报等技术咨询服务。</p><p>科琅医疗作为政府、企业、高校、科研机构之间的桥梁，为促进医疗器械相关科技成果向现实生产力转化提供全方位的科技服务。</p>"
     }, {
         "title": "大健康成果转化整体解决方案流程图",
-        "image": ["images/company_2.png"]
+        "image": ["images/kelang/company_2.png"]
     }], 
     "scientific": [{
         "title": "科研转化服务",
-        "image": ["images/scientific_1.jpg"],
+        "image": ["images/kelang/scientific_1.jpg"],
         "content": "<p>科研成果转化，是指为提高生产力水平而对科学研究与技术开发所产生的具有实用价值的科研成果所进行的后续试验、开发、应用、推广直至形成新产品、新工艺、新材料，发展新产业等活动。</p><p> 广州科琅医疗科技有限公司以科研转化平台作为桥接者通过对高校、科研院所等相关技术研发机构技术成果的收集，以及对企业、园区等相关单位的技术需求进行挖掘和汇集，为高校、科研院所、企业、园区等相关单位提供科技成果及技术需求发布、成果及需求推介、科技成果评估、技术转移转化、技术熟化、科技金融等服务。构建了科技成果汇集、技术需求聚集、科技项目对接、技术成果转移转化、科技项目投融资、项目孵化、培训管理及技术咨询等全链条市场化科研成果转化服务体系，可以为政府、高校、科研机构、园区、企业提供专业科研成果转化全流程服务。</p>"
     }, {
         "title": "科研转化促进服务结构图",
-        "image": ["images/scientific_2.png"]
-    }],
-    "project": [{
+        "image": ["images/kelang/scientific_2.png"]
+    },{
         "title": "项目申报服务",
-        "image": ["images/project_1.jpg"],
+        "image": ["images/kelang/project_1.jpg"],
         "content": "<p>当前申报的主要项目有：高新技术企业（国家级）、高新技术企业培育入库（省级）、科技小巨人企业（市级）、开发区瞪羚企业补贴、研发机构建设专项资金（市级）、科技与金融结合专项资金（市级）、省级研发经费补贴、市级研发经费补贴、守合同重信用企业、进口贴息等。</p>"
     }, {
         "title": "项目申报服务流程",
-        "image": ["images/project_2.png"]
+        "image": ["images/kelang/project_2.png"]
+    },{
+        "title": "联系我们",
+        "multiContent": "<p>苏朝芬：13711488775（微信同号）</br>梁庭玮：13826477662（微信同号</br> 公司座机：020-22017996</br> 公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层</p>"
+    }],
+    "project": [{
+        "title": "项目申报服务",
+        "image": ["images/kelang/project_1.jpg"],
+        "content": "<p>当前申报的主要项目有：高新技术企业（国家级）、高新技术企业培育入库（省级）、科技小巨人企业（市级）、开发区瞪羚企业补贴、研发机构建设专项资金（市级）、科技与金融结合专项资金（市级）、省级研发经费补贴、市级研发经费补贴、守合同重信用企业、进口贴息等。</p>"
+    }, {
+        "title": "项目申报服务流程",
+        "image": ["images/kelang/project_2.png"]
+    },{
+        "title": "联系我们",
+        "multiContent": "<p>苏朝芬：13711488775（微信同号）</br>梁庭玮：13826477662（微信同号</br> 公司座机：020-22017996</br> 公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层</p>"
     }],
     "medical": [{
-        "title": "医疗器械注册体系咨询服务",
-        "image": ["images/medical_1.jpg"],
+        "image": ["images/kelang/medical_1.jpg"],
+        "title": "医疗器械注册体系技术服务",
         "content": "<p>随着中国医疗器械市场的快速崛起，国家食品药品监督管理总局对医疗器械的监管也逐步与世界接轨，趋于严格。《医疗器械监督管理条例》开启了医疗器械行业监管的新纪元。</p><p>广州科琅医疗科技有限公司专注于医疗器械领域的咨询及服务。我们可提供医疗器械产品注册申报、GMP/GSP体系辅导、预分析报告、分类界定、创新医疗器械申报、法规培训等技术咨询服务。</p>"
     }, {
         "title": "I类/II类/III类医疗器械注册辅导",
@@ -41,40 +54,46 @@
         "multiContent": "<div style='height: 300px;'><div class='el-steps el-steps--vertical'><div class='el-step is-vertical'style='flex-basis: 50%;'><div class='el-step__head is-finish'><div class='el-step__line'style='margin-right: 0px;'><i class='el-step__line-inner'style='transition-delay: 0ms; border-width: 0px; height: 0%;'></i></div><div class='el-step__icon is-text'><div class='el-step__icon-inner'>1</div></div></div><div class='el-step__main'><div class='el-step__title is-finish' style='font-weight: 600;'>为客户新研制产品，或国外引进的产品进行管理类别的界定</div><div class='el-step__description is-finish'></div></div></div><div class='el-step is-vertical'style='flex-basis: 50%;'><div class='el-step__head is-process'><div class='el-step__line'style='margin-right: 0px;'><i class='el-step__line-inner'style='transition-delay: 0ms; border-width: 0px; height: 0%;'></i></div><div class='el-step__icon is-text'><div class='el-step__icon-inner'>2</div></div></div><div class='el-step__main'><div class='el-step__title is-process'>产品技术要求编制</div><div class='el-step__description is-process'></div></div></div><div class='el-step is-vertical'style='flex-basis: 50%;'><div class='el-step__head is-process'><div class='el-step__line'style='margin-right: 0px;'><i class='el-step__line-inner'style='transition-delay: 0ms; border-width: 0px; height: 0%;'></i></div><div class='el-step__icon is-text'><div class='el-step__icon-inner'>3</div></div></div><div class='el-step__main'><div class='el-step__title is-process'>整理产品介绍</div><div class='el-step__description is-process'></div></div></div><div class='el-step is-vertical'style='flex-basis: 50%;'><div class='el-step__head is-process'><div class='el-step__line'style='margin-right: 0px;'><i class='el-step__line-inner'style='transition-delay: 0ms; border-width: 0px; height: 0%;'></i></div><div class='el-step__icon is-text'><div class='el-step__icon-inner'>4</div></div></div><div class='el-step__main'><div class='el-step__title is-process'>境外上市资料整理</div><div class='el-step__description is-process'></div></div></div><div class='el-step is-vertical'style='flex-basis: 50%;'><div class='el-step__head is-process'><div class='el-step__line'style='margin-right: 0px;'><i class='el-step__line-inner'style='transition-delay: 0ms; border-width: 0px; height: 0%;'></i></div><div class='el-step__icon is-text'><div class='el-step__icon-inner'>5</div></div></div><div class='el-step__main'><div class='el-step__title is-process'>类似产品信息检索</div><div class='el-step__description is-process'></div></div></div><div class='el-step is-vertical'style='flex-basis: 50%;'><div class='el-step__head is-process'><div class='el-step__line'style='margin-right: 0px;'><i class='el-step__line-inner'style='transition-delay: 0ms; border-width: 0px; height: 0%;'></i></div><div class='el-step__icon is-text'><div class='el-step__icon-inner'>6</div></div></div><div class='el-step__main'><div class='el-step__title is-process'>中检院网络申报与跟踪</div><div class='el-step__description is-process'></div></div></div></div></div>"
     }, {
         "title": "医疗器械创新申报",
-        "image": ["images/medical_6.png"]
-    }], 
+        "image": ["images/kelang/medical_6.png"]
+    }, {
+        "title": "联系我们",
+        "multiContent": "<p>邬思华：13714581143（微信同号）</br>李志光：13070251856（微信同号</br> 公司座机：020-22017996</br> 公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层</p>"
+    }],
     "consultation": [{
-        "title": "医疗器械临床试验咨询服务",
-        "image": ["images/consultation_1.jpg"]
+        "title": "医疗器械临床试验技术服务",
+        "image": ["images/kelang/consultation_1.jpg"]
     }, {
         "title": "业务介绍-临床咨询服务·优势",
         "content": "<p>科琅法规部临床中心：专注于医疗器械临床研究领域，总部位于广东·广州，在苏州、北京、杭州、深圳均设有办事处。</p><p>我们拥有一支高效、专业的临床执行团队，具备完善的SOP、临床试验管理系统、受试者管理系统。</p><p>可提供医疗器械临床研究方案设计、中心筛选、试验监查、第三方核查、CRC派遣、数据管理、统计分析、定制式临床辅导、临床研究培训等服务。</p><p>公司临床研究业务发展迅猛，于2018年在苏州成立提供独立CRC派遣的公司。</p>"
     }, {
         "title": "临床试验服务项目",
-        "image": ["images/consultation_2.png"]
+        "image": ["images/kelang/consultation_2.png"]
     }, {
         "title": "临床研究·合作方式",
-        "image": ["images/consultation_3.png"]
+        "image": ["images/kelang/consultation_3.png"]
     }, {
         "title": "临床试验—部分案例",
-        "image": ["images/consultation_4.png"]
+        "image": ["images/kelang/consultation_4.png"]
     }, {
         "title": "合作客户",
-        "image": ["images/consultation_5.png"]
+        "image": ["images/kelang/consultation_5.png"]
     }, {
         "title": "合作医院",
-        "image": ["images/consultation_6.png"]
+        "image": ["images/kelang/consultation_6.png"]
+    }, {
+        "title": "联系我们",
+        "multiContent": "<p>周克：18118447767（微信同号）</br>罗玉婷：13760728945（微信同号</br> 公司座机：020-22017996</br> 公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层</p>"
     }],
     "teamResources": [{
         "title": "团队资源",
-        "image": ["images/teamResources_1.jpg"],
+        "image": ["images/kelang/teamResources_1.jpg"],
         "content": "<p>科琅法规部临床中心：专注于医疗器械临床研究领域，总部位于广东·广州，在苏州、北京、杭州、深圳均设有办事处。</p><p>我们拥有一支高效、专业的临床执行团队，具备完善的SOP、临床试验管理系统、受试者管理系统。</p><p>可提供医疗器械临床研究方案设计、中心筛选、试验监查、第三方核查、CRC派遣、数据管理、统计分析、定制式临床辅导、临床研究培训等服务。</p><p>公司临床研究业务发展迅猛，于2018年在苏州成立提供独立CRC派遣的公司。</p>"
     }, {
         "title": "团队介绍",
         "persons": [{
             "person": [
                     {
-                        "image": "images/person_01.png",
+                        "image": "images/kelang/person_01.png",
                         "name": "宓庆宁",
                         "job": "总经理",
                         "describe": "广东药学会制药工程专业委员会秘书长、广州开发区生物岛管委会顾问",
@@ -85,7 +104,7 @@
             }, {
                 "person": [
                     {
-                        "image": "images/person_02.png",
+                        "image": "images/kelang/person_02.png",
                         "name": "苏朝芬",
                         "job": "副总经理、科转部总监",
                         "describe": "中国药大学士、暨大医学硕士、中山大学MBA",
@@ -93,7 +112,7 @@
                         "detail": "<p class='detail-more'>从事政策咨询和科研转化工作,带领团队深入企业，从企业公司架构，战略规划，团队、业务产品构建等运营角度，为企业制定实际解决方案，直接服务企业超过百家，辅导企业实际获得的政策红利总计超过1亿。</p>"
                     },
                     {
-                        "image": "images/person_03.png",
+                        "image": "images/kelang/person_03.png",
                         "name": "邬思华",
                         "job": "法规部总监",
                         "describe": "华南理工大学MBA、国家注册审核员",
@@ -101,7 +120,7 @@
                         "detail": "<p class='detail-more'>20年的医疗器械法规工作经验，熟悉国内、国外欧盟美国的医疗器械注册、临床和质量体系法规要求和实际操作实践。擅长优化产品研发与市场准入的协同推进，从而缩短上市周期。</p>"
                     },
                     {
-                        "image": "images/person_04.png",
+                        "image": "images/kelang/person_04.png",
                         "name": "周 克",
                         "job": "临床运营总监",
                         "describe": "沈药学士,国家注册审核员,认证PMP",
@@ -112,7 +131,7 @@
             }, {
                 "person": [
                     {
-                        "image": "images/person_05.png",
+                        "image": "images/kelang/person_05.png",
                         "name": "李志光",
                         "job": "注册总监",
                         "describe": "国家注册审核员",
@@ -120,7 +139,7 @@
                         "detail": "<p class='detail-more'>15年医疗器械法规、体系辅导经验，熟悉医疗器械注册、GMP及化妆品、消字号法规要求及实际操作。</p>"
                     },
                     {
-                        "image": "images/person_06.png",
+                        "image": "images/kelang/person_06.png",
                         "name": "梁庭玮",
                         "job": "科转部副总监",
                         "describe": "曾供职于政府部门",
@@ -128,7 +147,7 @@
                         "detail": "<p class='detail-more'>擅长为企业量身制定政府项目申报、科技项目管理、企业研发资源合理整合与分配等方案。</p>"
                     },
                     {
-                        "image": "images/person_07.png",
+                        "image": "images/kelang/person_07.png",
                         "name": "杨彬杰",
                         "job": "项目经理",
                         "describe": "华农大药学硕士",
@@ -141,7 +160,36 @@
     }],
     "contactUs": [{
         "title": "联系我们",
-        "image": ["images/contactUs.jpg"],
-        "content": "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层\n固定电话：020-22017996\n科研转化联系人：苏朝芬 13711488775\n项目申报联系人：梁庭玮\n医疗器械临床试验联系人：周克 18118447767\n医疗器械注册体系联系人：邬思华 13714581143"
-    }]
+        "image": ["images/kelang/contactUs.jpg"],
+        "content": "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层\n固定电话：020-22017996\n科研转化联系人：苏朝芬 13711488775（微信同号）\n项目申报联系人：梁庭玮 13826477662（微信同号）\n医疗器械临床试验联系人：周克 18118447767 （微信同号）\n医疗器械注册体系联系人：邬思华 13714581143；李志光13070251856（微信同号）"
+    }],
+    "contacts":
+    {
+        "scientific": [
+            "苏朝芬：13711488775（微信同号）",
+            "梁庭玮：13826477662（微信同号）",
+            "公司座机：020-22017996",
+            "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层"
+        ],
+        "project": [
+            "苏朝芬：13711488775（微信同号）",
+            "梁庭玮：13826477662（微信同号）",
+            "公司座机：020-22017996",
+            "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层"
+        ],
+        "consultation": [
+            "周克：18118447767（微信同号）",
+            "罗玉婷：13760728945（微信同号）",
+            "公司座机：020-22017996",
+            "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层"
+        ],
+        "medical": [
+            "邬思华：13714581143（微信同号）",
+            "李志光：13070251856（微信同号）",
+            "公司座机：020-22017996",
+            "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层"
+        ]
+    }
+
+
 }

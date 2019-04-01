@@ -5,13 +5,14 @@ import router from './router';
 import App from './App.vue';
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import 'babel-polyfill';
 
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
 new Vue({
-  created() {
+  created () {
     AOS.init({once: true});
   },
   router,
