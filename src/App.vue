@@ -16,7 +16,6 @@ export default {}
   background: #fff;
 }
 h2, h4, p {
-    line-height: 1.2;
     margin: 0;
 }
 </style>
