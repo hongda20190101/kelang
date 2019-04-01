@@ -14,14 +14,14 @@
     }, {
         "title": "科研转化促进服务结构图",
         "image": ["images/kelang/scientific_2.png"]
-    },{
+    }, {
         "title": "项目申报服务",
         "image": ["images/kelang/project_1.jpg"],
         "content": "<p>当前申报的主要项目有：高新技术企业（国家级）、高新技术企业培育入库（省级）、科技小巨人企业（市级）、开发区瞪羚企业补贴、研发机构建设专项资金（市级）、科技与金融结合专项资金（市级）、省级研发经费补贴、市级研发经费补贴、守合同重信用企业、进口贴息等。</p>"
     }, {
         "title": "项目申报服务流程",
         "image": ["images/kelang/project_2.png"]
-    },{
+    }, {
         "title": "联系我们",
         "multiContent": "<p>苏朝芬：13711488775（微信同号）</br>梁庭玮：13826477662（微信同号</br> 公司座机：020-22017996</br> 公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层</p>"
     }],
@@ -32,7 +32,7 @@
     }, {
         "title": "项目申报服务流程",
         "image": ["images/kelang/project_2.png"]
-    },{
+    }, {
         "title": "联系我们",
         "multiContent": "<p>苏朝芬：13711488775（微信同号）</br>梁庭玮：13826477662（微信同号</br> 公司座机：020-22017996</br> 公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层</p>"
     }],
@@ -91,80 +91,68 @@
     }, {
         "title": "团队介绍",
         "persons": [{
-            "person": [
-                    {
-                        "image": "images/kelang/person_01.png",
-                        "name": "宓庆宁",
-                        "job": "总经理",
-                        "describe": "广东药学会制药工程专业委员会秘书长、广州开发区生物岛管委会顾问",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>15年医疗卫生行业经验，参与组织了中国甲状腺疾病诊疗指南的编撰、发布及培训工作， 设计并参与实施了中国十大城市甲状腺疾病流行病学调查项目，擅长医疗器械市场策略的制订与执行落实。具备多年生物医药领域经验，熟悉生物医药、医疗器械领域的国内外技术趋势及现状。</p>"
-                    }
-                ]
+            "person": [{
+                "image": "images/kelang/person_01.png",
+                "name": "宓庆宁",
+                "job": "总经理",
+                "describe": "广东药学会制药工程专业委员会秘书长、广州开发区生物岛管委会顾问",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>15年医疗卫生行业经验，参与组织了中国甲状腺疾病诊疗指南的编撰、发布及培训工作， 设计并参与实施了中国十大城市甲状腺疾病流行病学调查项目，擅长医疗器械市场策略的制订与执行落实。具备多年生物医药领域经验，熟悉生物医药、医疗器械领域的国内外技术趋势及现状。</p>"
+            }]
+        }, {
+            "person": [{
+                "image": "images/kelang/person_02.png",
+                "name": "苏朝芬",
+                "job": "副总经理、科转部总监",
+                "describe": "中国药大学士、暨大医学硕士、中山大学MBA",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>从事政策咨询和科研转化工作,带领团队深入企业，从企业公司架构，战略规划，团队、业务产品构建等运营角度，为企业制定实际解决方案，直接服务企业超过百家，辅导企业实际获得的政策红利总计超过1亿。</p>"
             }, {
-                "person": [
-                    {
-                        "image": "images/kelang/person_02.png",
-                        "name": "苏朝芬",
-                        "job": "副总经理、科转部总监",
-                        "describe": "中国药大学士、暨大医学硕士、中山大学MBA",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>从事政策咨询和科研转化工作,带领团队深入企业，从企业公司架构，战略规划，团队、业务产品构建等运营角度，为企业制定实际解决方案，直接服务企业超过百家，辅导企业实际获得的政策红利总计超过1亿。</p>"
-                    },
-                    {
-                        "image": "images/kelang/person_03.png",
-                        "name": "邬思华",
-                        "job": "法规部总监",
-                        "describe": "华南理工大学MBA、国家注册审核员",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>20年的医疗器械法规工作经验，熟悉国内、国外欧盟美国的医疗器械注册、临床和质量体系法规要求和实际操作实践。擅长优化产品研发与市场准入的协同推进，从而缩短上市周期。</p>"
-                    },
-                    {
-                        "image": "images/kelang/person_04.png",
-                        "name": "周 克",
-                        "job": "临床运营总监",
-                        "describe": "沈药学士,国家注册审核员,认证PMP",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>8年器械CRO工作经验，擅长策划器械上市整体解决方案、器械临床试验管理。</p>"
-                    }
-                ]
+                "image": "images/kelang/person_03.png",
+                "name": "邬思华",
+                "job": "法规部总监",
+                "describe": "华南理工大学MBA、国家注册审核员",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>20年的医疗器械法规工作经验，熟悉国内、国外欧盟美国的医疗器械注册、临床和质量体系法规要求和实际操作实践。擅长优化产品研发与市场准入的协同推进，从而缩短上市周期。</p>"
             }, {
-                "person": [
-                    {
-                        "image": "images/kelang/person_05.png",
-                        "name": "李志光",
-                        "job": "注册总监",
-                        "describe": "国家注册审核员",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>15年医疗器械法规、体系辅导经验，熟悉医疗器械注册、GMP及化妆品、消字号法规要求及实际操作。</p>"
-                    },
-                    {
-                        "image": "images/kelang/person_06.png",
-                        "name": "梁庭玮",
-                        "job": "科转部副总监",
-                        "describe": "曾供职于政府部门",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>擅长为企业量身制定政府项目申报、科技项目管理、企业研发资源合理整合与分配等方案。</p>"
-                    },
-                    {
-                        "image": "images/kelang/person_07.png",
-                        "name": "杨彬杰",
-                        "job": "项目经理",
-                        "describe": "华农大药学硕士",
-                        "showDetail": false,
-                        "detail": "<p class='detail-more'>多年政府政策研究于科技项目申报经验。擅长于企业整体项目申报策划。</p>"
-                    }
-                ]
-            }
-        ]
+                "image": "images/kelang/person_04.png",
+                "name": "周 克",
+                "job": "临床运营总监",
+                "describe": "沈药学士,国家注册审核员,认证PMP",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>8年器械CRO工作经验，擅长策划器械上市整体解决方案、器械临床试验管理。</p>"
+            }]
+        }, {
+            "person": [{
+                "image": "images/kelang/person_05.png",
+                "name": "李志光",
+                "job": "注册总监",
+                "describe": "国家注册审核员",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>15年医疗器械法规、体系辅导经验，熟悉医疗器械注册、GMP及化妆品、消字号法规要求及实际操作。</p>"
+            }, {
+                "image": "images/kelang/person_06.png",
+                "name": "梁庭玮",
+                "job": "科转部副总监",
+                "describe": "曾供职于政府部门",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>擅长为企业量身制定政府项目申报、科技项目管理、企业研发资源合理整合与分配等方案。</p>"
+            }, {
+                "image": "images/kelang/person_07.png",
+                "name": "杨彬杰",
+                "job": "项目经理",
+                "describe": "华农大药学硕士",
+                "showDetail": false,
+                "detail": "<p class='detail-more'>多年政府政策研究于科技项目申报经验。擅长于企业整体项目申报策划。</p>"
+            }]
+        }]
     }],
     "contactUs": [{
         "title": "联系我们",
         "image": ["images/kelang/contactUs.jpg"],
         "content": "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层\n固定电话：020-22017996\n科研转化联系人：苏朝芬 13711488775（微信同号）\n项目申报联系人：梁庭玮 13826477662（微信同号）\n医疗器械临床试验联系人：周克 18118447767 （微信同号）\n医疗器械注册体系联系人：邬思华 13714581143；李志光13070251856（微信同号）"
     }],
-    "contacts":
-    {
+    "contacts": {
         "scientific": [
             "苏朝芬：13711488775（微信同号）",
             "梁庭玮：13826477662（微信同号）",
@@ -190,6 +178,4 @@
             "公司地址：广州市高新技术开发区开源大道11号科技企业加速器B8栋3层"
         ]
     }
-
-
 }

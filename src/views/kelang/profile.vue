@@ -39,7 +39,8 @@
     </el-row>
 </template>
 <script>
-import axios from 'axios'
+import datas from  './kelang.json';
+
 export default {
     data () {
         return {
@@ -53,14 +54,9 @@ export default {
         }
     },
     mounted () {
-        axios
-        .get('./config/kelang.json')
-        .then(response => {
-            this.datas = response.data;
-            this.data = this.datas[this.$route.query.id];
-            this.contactInfos = this.datas.contacts[this.$route.query.id]
-        });
         let id = this.$route.query.id || '';
+        this.data = datas[id];
+        this.contactInfos = datas.contacts[id];
         this.active = `/kelang/profile?id=${id}`;
         this.publicPath = process.env.BASE_URL;
         this.showMenu = ['scientific', 'project', 'medical', 'consultation'].indexOf(id) > -1;
@@ -68,10 +64,10 @@ export default {
     watch: {
         '$route' (to) {
             let id = to.query.id;
-            this.data = this.datas[id];
+            this.data = datas[id];
             this.active = `/kelang/profile?id=${id}`;
             this.showMenu = ['scientific', 'project', 'medical', 'consultation'].indexOf(id) > -1;
-            this.contactInfos = this.datas.contacts[id]
+            this.contactInfos = datas.contacts[id]
         }
     },
     computed: {
