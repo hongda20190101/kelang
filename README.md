@@ -1,29 +1,15 @@
-# vote
+# 科琅项目
+[![Build Status](https://travis-ci.org/hongda20190101/kelang.svg?branch=master)](https://travis-ci.org/hongda20190101/kelang)
 
-## Project setup
+### 本地运行此项目
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 本地打包此项目
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 此项目已支持 Travis-CI 自动化部署，提交后会自动部署到测试机上

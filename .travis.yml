@@ -1,0 +1,32 @@
+language: node_js
+
+node_js:
+- '10'
+
+branchs:
+  only:
+  - master
+
+before_script:
+- npm install
+
+script:
+- npm run build
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_e610c6492945_key -iv $encrypted_e610c6492945_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+
+install:
+- echo $ADDRESS >> ~/.ssh/known_hosts
+
+after_success:
+- chmod 600 ~/.ssh/id_rsa
+- cd dist
+- zip -r kelang.zip *
+- scp -o StrictHostKeyChecking=no -r ./kelang.zip root@$ADDRESS:/usr/local/kelang/
+- ssh root@$ADDRESS -o StrictHostKeyChecking=no 'cd /usr/local/kelang && unzip -o kelang.zip'
+
+notifications:
+    webhooks:
+      - https://hook.worktile.com/travisci/1bc6c11fd9e0495d865d1382c417ce76
