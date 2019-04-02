@@ -35,7 +35,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "vue/require-v-for-key": false
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

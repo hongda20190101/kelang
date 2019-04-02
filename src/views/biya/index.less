@@ -1,0 +1,216 @@
+.contain {
+    .header {
+        text-align: center;
+        background: #fff;
+        border-bottom: 2px solid darken(#F8C6D1, 5%);
+        .logo {
+            padding: 1em;
+            border-bottom: 12px solid darken(#F8C6D1, 5%);
+        }
+        .el-button {
+            float: right;
+            margin: 1em;
+            padding: 0.8em;
+        }
+        .menu {
+            max-width: 1024px;
+            position: relative;
+            margin: 0 auto;
+            .el-menu {
+                display: inline-block;
+                border-bottom: none;
+                &-item{
+                    font-size: 16px;
+                    border-bottom: none !important;
+                    &:hover, &:active {
+                        color: darken(#F8C6D1, 5%);
+                        background-color: #fff;
+                    }
+                }
+            }
+            .wechatBtn {
+                position: absolute;
+                right: 0;
+                top: -4px;
+                opacity: 0.5;
+                .el-button {
+                    &:hover {
+                        border: 1px solid #DCDFE6;
+                        background: #fff;
+                    }
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .footer {
+        border-top: 2px solid darken(#F8C6D1, 5%);
+        border-bottom: 2em solid darken(#F8C6D1, 5%);
+        padding: 1em 1.5em;
+        .content {
+            max-width: 1024px;
+            margin: 0 auto;
+            color: #8d8d8d;
+            .logo {
+                display: inline-block;
+                margin: 2em 3em 0 0;
+                vertical-align: top;
+            }
+            .text {
+                margin-right: 3em;
+                display: inline-block;
+                line-height: 1.5;
+                padding: 10px 0;
+                font-size: 12px;
+                h2 {
+                    color: #000;
+                }
+            }
+            .wechat {
+                float: right;
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+    }
+    .imageContent {
+        box-sizing: border-box;
+        height: 350px;
+        padding-top: 50px;
+        background-position: center;
+        background-size: cover;
+        h2 {
+            max-width: 1024px;
+            margin: 0 auto;
+            color: #Fff;
+        }
+    }
+    .widgt {
+        padding: 1.5em;
+        .header {
+            width: 100%;
+            border-bottom: 2px solid darken(#F8C6D1, 5%);
+            height: 25px;
+            overflow: visible;
+            margin-bottom: 2.5em;
+            .title {
+                margin: 0 auto;
+                line-height: 50px;
+                max-width: 1024px;
+                span {
+                    float: left;
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #fff;
+                    font-size: 24px;
+                    color: darken(#F8C6D1, 5%);
+                    font-weight: bold;
+                    padding: 0 0.8em;
+                }
+            }
+        }
+        .introduce {
+            max-width: 1024px;
+            margin: 0 auto;
+            .text {
+                font-size: 16px;                
+                line-height: 1.5;
+                p {
+                    text-indent: 2em;
+                }
+            }
+        }
+        .logo {
+            padding: 1em 0;
+            text-align: center;
+        }
+        .pure {
+            text-align: center;
+            width: 33.3333%;
+            display: inline-block;
+            margin-top: 2em;
+            .image {
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 1em;
+                width: 80%;
+                margin: 0 auto 1em auto;
+                .mask {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    padding: 0.8em;
+                    box-sizing: border-box;
+                    opacity: 0;
+                    transition: .4s;
+                    transform: scale(2);
+                    overflow: auto;
+                    p {
+                        font-size: 14px;
+                        color: #fff;
+                        text-align: left;
+                        line-height: 1.5;
+                    }
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+            h4 {
+                font-size: 24px;
+                color: darken(#F8C6D1, 5%);
+                margin-bottom: 1em;
+            }
+            p {
+                font-size: 18px;
+                span {
+                    color: #8d8d8d;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .el-carousel__item img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .contain {
+        .header {
+            text-align: left;
+            .logo {
+                border-bottom: none;
+                display: inline-block;
+                padding: 0.5em 1em;
+            }
+            .menu .el-menu {
+                width: 100%;
+                display: block;
+            }
+        }
+        .imageContent {
+            height: 250px;
+        }
+        .widgt {
+            .header .title span {
+                padding: 0 0.8em 0 0;
+            }
+            .pure {
+                width: 100%;
+                .image {
+                    width: 100%;
+                }
+            }
+        }
+        .footer {
+            .content .logo {
+                margin: 0;
+            }
+        }
+    }
+}

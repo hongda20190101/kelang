@@ -1,28 +1,26 @@
 <template>
-    <div class="main">
-        <div class="imageContent" :style="'background-image:url(' + background + ')'">
-            <h2>{{datas.title}}</h2>
-        </div>
-        <div class="widgt">
+    <div class="container">
+        <div class="imageContent" :style="'background-image:url(' + background + ')'"></div>
+        <div class="widgt" v-for="item in datas">
             <div class="header">
-                <div class="title" v-if="datas.title" data-aos="fade-up">
-                    <span>{{datas.title}}</span>
+                <div class="title" v-if="item.title" data-aos="fade-up">
+                    <span>{{item.title}}</span>
                 </div>
             </div>
             <div class="introduce" data-aos="fade-up">
-                <div class="logo" v-if="datas.image">
-                    <img :src="publicPath + datas.image" width="200" >
+                <div class="logo" v-if="item.image">
+                    <img :src="publicPath + item.image" width="200" >
                 </div>
-                <div v-html="datas.multiContent" v-if="datas.multiContent"></div>
-                <div class="pure" v-for="item in datas.products">
+                <div class="text" v-html="item.multiContent" v-if="item.multiContent"></div>
+                <div class="pure" v-for="item in item.products">
                     <div class="image">
-                        <img :src="publicPath + item.image" />
+                        <img :src="publicPath + item.image" width="100%"/>
                         <div class="mask">
                             <p v-html="item.info"></p>
                         </div>
                     </div>
-                    <p>
-                        {{item.title}}
+                    <p class="text">
+                        {{item.title}}<br />
                         <span>{{item.subtitle}}</span>
                     </p>
                 </div>
@@ -35,7 +33,7 @@ import datas from './biya.json'
 export default {
     data () {
         return {
-            datas: {},
+            datas: [],
             background: null,
             publicPath: null
         }
@@ -44,13 +42,13 @@ export default {
         let id = this.$route.query.id || '';
         this.datas = datas[id];
         this.publicPath = process.env.BASE_URL;
-        this.background = `${process.env.BASE_URL}images/biya/${id}_1.jpg`
+        this.background = `${process.env.BASE_URL}images/biya/${id}.jpg`
     },
     watch: {
         '$route' (to) {
             let id = to.query.id;
             this.datas = datas[id];
-            this.background = `${process.env.BASE_URL}images/biya/${id}_1.jpg`
+            this.background = `${process.env.BASE_URL}images/biya/${id}.jpg`
         }
     },
     computed: {
@@ -62,29 +60,3 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-.main {
-    .imageContent {
-        box-sizing: border-box;
-        height: 350px;
-        padding-top: 50px;
-        background-position: center;
-        h2 {
-            max-width: 1024px;
-            margin: 0 auto;
-            color: #Fff;
-        }
-    }
-    .pure {
-        p {
-            color: #000;
-            span {
-                vertical-align: text-bottom;
-                color: #8d8d8d;
-                font-size: 14px;
-                padding-left: 6px;
-            }
-        }
-    }
-}
-</style>

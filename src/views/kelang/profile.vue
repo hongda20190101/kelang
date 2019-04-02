@@ -82,24 +82,26 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 .row-bg {
     overflow: hidden;
 }
 .content {
     box-sizing: border-box;
     padding: 20px;
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+    h3 {
+        margin: 0;
+        border-left: 5px solid #409EFF;
+        padding: 0.5em;
+        margin: 2em 0;
+    }
 }
-.content .image {
-    width: 100%;
-    height: 100%;
-}
-.content h3 {
-    margin: 0;
-    border-left: 5px solid #409EFF;
-    padding: 0.5em;
-    margin: 2em 0;
-}
+.content 
+.content 
 .text {
     text-indent:2em;
     white-space: pre-wrap;
@@ -117,10 +119,10 @@ export default {
     top: 11%;
     width: 200px;
     margin-left: -220px;
-}
-.listMenu .is-active {
-    outline: 0;
-    background-color: #ecf5ff;
+    .is-active {
+        outline: 0;
+        background-color: #ecf5ff;
+    }
 }
 .content .el-menu{
     border-right: none !important;;
@@ -132,9 +134,6 @@ export default {
     position: relative;
     background: #fff;
     text-align: center;
-}
-.introduce:hover {
-    z-index: 20;
 }
 .introduce:hover .persion-detail {
     display: block;
