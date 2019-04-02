@@ -12,8 +12,8 @@
                             <template slot="title">项目介绍</template>
                             <el-menu-item index="/kelang/profile?id=scientific">科研转化服务</el-menu-item>
                             <el-menu-item index="/kelang/profile?id=project">项目申报服务</el-menu-item>
-                            <el-menu-item index="/kelang/profile?id=medical">医疗器械注册体系技术服务</el-menu-item>
                             <el-menu-item index="/kelang/profile?id=consultation">医疗器械临床试验技术服务</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=medical">医疗器械注册体系技术服务</el-menu-item>
                         </el-submenu>
                         <el-menu-item index="/kelang/profile?id=teamResources">团队资源</el-menu-item>
                         <el-menu-item index="/kelang/profile?id=contactUs">联系我们</el-menu-item>
