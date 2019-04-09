@@ -8,7 +8,9 @@ import profile from '../views/kelang/profile';
 import biya from '../views/biya';
 import biyaHome from '../views/biya/home';
 import biyaInfo from '../views/biya/info';
-
+import jidian from '../views/jidian';
+import jidianHome from '../views/jidian/home';
+import jidianProfile from '../views/jidian/profile';
 const routes = [{
     path: '/',
     redirect: '/kelang/',
@@ -31,6 +33,16 @@ const routes = [{
     }, {
         path: 'info',
         component: biyaInfo
+    }]
+}, {
+    path: '/jidian',
+    component: jidian,
+    children: [{
+        path: '/',
+        component: jidianHome,
+    }, {
+        path: 'profile',
+        component: jidianProfile
     }]
 }];
 const router = new VueRouter({
