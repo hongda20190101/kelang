@@ -2,8 +2,10 @@
     <el-container>
         <el-header height="auto">
             <div class="header">
-                <img :src="publicPath + 'images/jidian/logo.png'" />
-                <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
+                <div class="buttons">
+                    <img :src="publicPath + 'images/jidian/logo.png'" />
+                    <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
+                </div>
                 <el-collapse-transition>
                     <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
                         <el-menu-item index="/jidian/">首页</el-menu-item>
@@ -20,7 +22,7 @@
         <el-footer height="auto">
             <div class="footer-top">
                 <el-row>
-                    <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                    <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
                         <div class="single_address">
                             <i class="el-icon-phone"></i>
                             <p>宓庆宁</p>
@@ -28,19 +30,19 @@
                             <p>18502721829（微信同号）</p>
                         </div>
                     </el-col>
-                    <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                    <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
                         <div class="single_address">
                             <i class="el-icon-location-outline"></i>
                             <p>广州市黄埔区开源大道11号科技企业加速器B8栋三楼</p>
                         </div>
                     </el-col>
-                    <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                    <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
                         <div class="single_address">
                             <i class="el-icon-message"></i>
                             <p>Info@nurjahan.com</p>
                         </div>
                     </el-col>
-                    <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                    <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
                         <div class="single_address">
                             <i class="el-icon-time"></i>
                             <p>周一 - 周五: 09.00 - 17.15</p>
@@ -68,7 +70,7 @@ export default {
         this.activeIndex = id ? `/kelang/profile?id=${id}` : '/kelang/';
         this.publicPath = process.env.BASE_URL;
         this.showMenu = !navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
-        document.getElementsByClassName('el-main')[0].style.minHeight = `${window.innerHeight - 62}px`;
+        document.title = "奇点医药科技（广州）有限公司";
     },
     computed: {
         isMobile () {
@@ -77,7 +79,7 @@ export default {
     }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .el-main {
     background: #f9f9f9;
     padding: 0;
@@ -91,13 +93,25 @@ export default {
     .header {
         max-width: 1024px;
         margin: 0 auto;
-        img {
-            height: 55px;
-        }
-        .el-button {
-            float: right;
-            margin: 7px;
-            padding: 12px;
+        .buttons {
+            position: relative;
+            display: inline-block;
+            img {
+                height: 55px;
+            }
+            .el-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                border: none;
+                border-radius: 0;
+                background: #333;
+                color: #fff;
+                &:hover, &:active {
+                    background: darken(#333, 10%);
+                }
+            }
         }
         .el-menu.el-menu--horizontal {
             float: right;
@@ -128,5 +142,20 @@ export default {
     line-height: 55px;
     margin-bottom: 10px;
     width: 55px;
+}
+@media screen and (max-width: 900px) {
+    .el-header .header .buttons {
+        display: block;
+        img {
+            height: 40px;
+            padding: 0.2em 0.5em;
+        }
+    }
+    .footer-top {
+        padding: 0;
+    }
+    .single_address {
+        padding:1.5em 0;
+    }
 }
 </style>

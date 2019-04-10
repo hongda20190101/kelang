@@ -1,10 +1,12 @@
 <template>
     <div class="contain">
         <div class="header">
-            <div class="logo">
-                <img :src="publicPath + 'images/biya/logo.png'" width="100"/>
+            <div class="buttons">
+                <div class="logo">
+                    <img :src="publicPath + 'images/biya/logo.png'" width="100"/>
+                </div>
+                <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
             </div>
-            <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
             <div class="menu">
                 <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" active-text-color="#909399"
                     v-show="showMenu" router @select="isMobile ? showMenu = !showMenu : ''">
@@ -51,7 +53,8 @@ export default {
         }
     },
     mounted () {
-        this.publicPath = process.env.BASE_URL
+        this.publicPath = process.env.BASE_URL;
+        document.title = "广州碧雅医疗保健科技有限公司";
     }, 
     computed: {
         isMobile () {

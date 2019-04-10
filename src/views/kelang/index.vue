@@ -44,6 +44,7 @@ export default {
         this.publicPath = process.env.BASE_URL;
         this.showMenu = !navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
         document.getElementsByClassName('el-main')[0].style.minHeight = `${window.innerHeight - 62}px`;
+        document.title = "广州科琅医疗科技有限公司";
     },
     computed: {
         isMobile () {
@@ -64,11 +65,6 @@ export default {
         margin: 0 auto;
         img {
             height: 55px;
-        }
-        .el-button {
-            float: right;
-            margin: 7px;
-            padding: 12px;
         }
         .el-menu.el-menu--horizontal {
             float: right;

@@ -3,14 +3,27 @@
         text-align: center;
         background: #fff;
         border-bottom: 2px solid darken(#F8C6D1, 5%);
-        .logo {
-            padding: 1em;
-            border-bottom: 12px solid darken(#F8C6D1, 5%);
-        }
-        .el-button {
-            float: right;
-            margin: 1em;
-            padding: 0.8em;
+        .buttons {
+            position: relative;
+            width: 100%;
+            .logo {
+                border-bottom: 12px solid darken(#F8C6D1, 5%);
+                padding: 1em;
+            }
+            .el-button {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                padding: 0 2em;
+                border-radius: 0;
+                border: none;
+                background: darken(#F8C6D1, 5%);
+                color: #fff;
+                &:hover, &:active {
+                    background: darken(#F8C6D1, 10%);
+                }
+            }
         }
         .menu {
             max-width: 1024px;
@@ -31,7 +44,7 @@
             .wechatBtn {
                 position: absolute;
                 right: 0;
-                top: -4px;
+                top: 6px;
                 opacity: 0.5;
                 .el-button {
                     &:hover {
@@ -183,7 +196,7 @@
     .contain {
         .header {
             text-align: left;
-            .logo {
+            .buttons .logo {
                 border-bottom: none;
                 display: inline-block;
                 padding: 0.5em 1em;

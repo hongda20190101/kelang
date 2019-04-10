@@ -71,6 +71,9 @@
     line-height: 1.2;
     text-align: center;
 }
+.main .content .item {
+    padding: 2em 0;
+}
 .sectionTitle{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -102,9 +105,6 @@
     text-align: center;
     font-size: 20px;
 }
-.introWrap{
-    margin-left: 30px;
-}
 .introTitle{
     font-weight: 600;
     letter-spacing: 1px;
@@ -135,6 +135,9 @@
       margin: 0 auto;
       padding-top: 20px;
   }
+  .introWrap{
+      margin-left: 30px;
+  }
 }
 </style>
 <script>
@@ -149,7 +152,6 @@ export default {
     },    
     mounted () {
         this.background = `${process.env.BASE_URL}images/jidian/background.jpg`;
-        document.getElementsByClassName('main')[0].style.height = `${window.innerHeight - 62}px`;
         this.data = datas['introduces'];
     },
     computed: {
