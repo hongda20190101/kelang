@@ -11,9 +11,10 @@ import biyaInfo from '../views/biya/info';
 import jidian from '../views/jidian';
 import jidianHome from '../views/jidian/home';
 import jidianProfile from '../views/jidian/profile';
+const defaultPath = window.location.origin.indexOf('biyamed') > -1 ? '/biya/' : '/kelang/';
 const routes = [{
     path: '/',
-    redirect: '/kelang/',
+    redirect: defaultPath,
 }, { 
     path: '/kelang',
     component: kelang,

@@ -31,7 +31,7 @@
                     <h2>广州碧雅医疗保健科技有限公司</h2>
                     <p>联系电话:020-22017996</p>
                     <p>联系地址:广州市高新技术开发区开源大道11号科技企业加速器B8栋2层207房</p>
-                    <p>苏ICP备15008XXX号</p>
+                    <p>粤ICP备19049350号</p>
                     <p>CopyRight © 2017-2019 all right reserved.</p>
                 </div>
                 <div class="wechat" v-if="!isMobile">
