@@ -4,23 +4,23 @@
             <div class="header">
                 <div class="buttons">
                     <img :src="publicPath + 'images/kelang/logo.png'" />
-                    <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
+                    <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>    
+                    <el-collapse-transition>
+                        <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
+                            <el-menu-item index="/kelang/">首页</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=company">公司介绍</el-menu-item>
+                            <el-submenu index="#">
+                                <template slot="title">项目介绍</template>
+                                <el-menu-item index="/kelang/profile?id=scientific">科研转化服务</el-menu-item>
+                                <el-menu-item index="/kelang/profile?id=project">项目申报服务</el-menu-item>
+                                <el-menu-item index="/kelang/profile?id=consultation">医疗器械临床试验技术服务</el-menu-item>
+                                <el-menu-item index="/kelang/profile?id=medical">医疗器械注册体系技术服务</el-menu-item>
+                            </el-submenu>
+                            <el-menu-item index="/kelang/profile?id=teamResources">团队资源</el-menu-item>
+                            <el-menu-item index="/kelang/profile?id=contactUs">联系我们</el-menu-item>
+                        </el-menu>
+                    </el-collapse-transition>
                 </div>
-                <el-collapse-transition>
-                    <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
-                        <el-menu-item index="/kelang/">首页</el-menu-item>
-                        <el-menu-item index="/kelang/profile?id=company">公司介绍</el-menu-item>
-                        <el-submenu index="#">
-                            <template slot="title">项目介绍</template>
-                            <el-menu-item index="/kelang/profile?id=scientific">科研转化服务</el-menu-item>
-                            <el-menu-item index="/kelang/profile?id=project">项目申报服务</el-menu-item>
-                            <el-menu-item index="/kelang/profile?id=consultation">医疗器械临床试验技术服务</el-menu-item>
-                            <el-menu-item index="/kelang/profile?id=medical">医疗器械注册体系技术服务</el-menu-item>
-                        </el-submenu>
-                        <el-menu-item index="/kelang/profile?id=teamResources">团队资源</el-menu-item>
-                        <el-menu-item index="/kelang/profile?id=contactUs">联系我们</el-menu-item>
-                    </el-menu>
-                </el-collapse-transition>
             </div>
         </el-header>
         <el-main>
