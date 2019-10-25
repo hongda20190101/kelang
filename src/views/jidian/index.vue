@@ -12,8 +12,8 @@
                         <el-menu-item index="/jidian/profile?id=product">产品中心</el-menu-item>
                         <el-submenu index="2">
                             <template slot="title">新闻中心</template>
-                            <el-menu-item index="/jidian/profile?id=news&newid=0">smagister活器官培训系统发布会</el-menu-item>
                             <el-menu-item index="/jidian/profile?id=news&newid=1">奇点医药勇夺中国创新创业大赛生物医药行业冠军</el-menu-item>
+                            <el-menu-item index="/jidian/profile?id=news&newid=0">smagister活器官培训系统发布会</el-menu-item>
                         </el-submenu>
                         <el-menu-item index="/jidian/profile?id=contactUs">联系我们</el-menu-item>
                     </el-menu>

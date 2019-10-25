@@ -11,7 +11,7 @@ import biyaInfo from '../views/biya/info';
 import jidian from '../views/jidian';
 import jidianHome from '../views/jidian/home';
 import jidianProfile from '../views/jidian/profile';
-const defaultPath = window.location.origin.indexOf('biyamed') > -1 ? '/biya/' : '/kelang/';
+const defaultPath = window.location.origin.indexOf('biyamed') > -1 ? '/biya/' :  window.location.origin.indexOf('singularitymed') > -1 ? '/jidian' : '/kelang/';
 const routes = [{
     path: '/',
     redirect: defaultPath,

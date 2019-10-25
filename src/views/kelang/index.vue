@@ -2,13 +2,15 @@
     <el-container>
         <el-header height="auto">
             <div class="header">
-                <img :src="publicPath + 'images/kelang/logo.png'" />
-                <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
+                <div class="buttons">
+                    <img :src="publicPath + 'images/kelang/logo.png'" />
+                    <el-button icon="el-icon-more" v-if="isMobile" @click="showMenu = !showMenu"></el-button>
+                </div>
                 <el-collapse-transition>
                     <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
                         <el-menu-item index="/kelang/">首页</el-menu-item>
                         <el-menu-item index="/kelang/profile?id=company">公司介绍</el-menu-item>
-                        <el-submenu>
+                        <el-submenu index="#">
                             <template slot="title">项目介绍</template>
                             <el-menu-item index="/kelang/profile?id=scientific">科研转化服务</el-menu-item>
                             <el-menu-item index="/kelang/profile?id=project">项目申报服务</el-menu-item>
@@ -25,7 +27,7 @@
             <router-view></router-view>
         </el-main>
         <el-footer height="auto">
-            <p>科琅医疗<br>苏ICP备15008XXX号</p>
+            <p>科琅医疗<br>粤ICP备19038631号</p>
         </el-footer>
     </el-container>
 </template>
@@ -63,8 +65,18 @@ export default {
     .header {
         max-width: 1024px;
         margin: 0 auto;
-        img {
-            height: 55px;
+        .buttons {
+            position: relative;
+            img {
+                height: 55px;
+            }
+            .el-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 0;
+            }
         }
         .el-menu.el-menu--horizontal {
             float: right;
