@@ -9,7 +9,11 @@
             </el-menu>
             <div v-for="item in data" :key="item.title" class="item">
                 <h2 :data-aos='isLowerIE10 ? "fade-up" : ""' v-if="item.title">{{item.title}}</h2>
-                <h3 :data-aos='isLowerIE10 ? "fade-up" : ""' v-if="item.subTitle">{{item.subTitle}}</h3>
+                <template v-if="item.subs && item.subs.length > 0" v-for="sub in item.subs">
+                    <h3 :data-aos='isLowerIE10 ? "fade-up" : ""' v-if="sub.subTitle">{{sub.subTitle}}</h3>
+                    <img v-if="sub.image" :src="sub.image" class="image" :data-aos='isLowerIE10 ? "fade-up" : ""'/>
+                    <div class="itemContent" v-html="sub.content" v-if="sub.content" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
+                </template>
                 <img v-if="item.image" :src="item.image" class="image" :data-aos='isLowerIE10 ? "fade-up" : ""'/>
                 <div class="itemContent" v-html="item.content" v-if="item.content" :data-aos='isLowerIE10 ? "fade-up" : ""'></div>
             </div>
@@ -31,9 +35,13 @@ export default {
             contactInfos: []
         }
     },
-    mounted () {
+    created () {
         let id = this.$route.query.id || '';
         this.data = datas[id];
+        if (id == 'news') {
+            let newid = this.$route.query.newid || '0'
+            this.data = datas[id][newid]
+        }
         this.contactInfos = datas.contactInfos;
         this.active = `/jidian/profile?id=${id}`;
         this.publicPath = process.env.BASE_URL;
@@ -43,6 +51,10 @@ export default {
         '$route' (to) {
             let id = to.query.id;
             this.data = datas[id];
+            if (id == 'news') {
+                let newid = to.query.newid || '0'
+                this.data = datas[id][newid]
+            }
             this.active = `/kelang/profile?id=${id}`;
             this.showMenu = ['product', 'news'].indexOf(id) > -1;
             this.contactInfos = datas.contactInfos;
@@ -92,9 +104,16 @@ export default {
 }
 .item h2{
     text-align: center;
+    margin-bottom: 16px;
+}
+.item image{
+    margin-bottom: 16px;
 }
 .itemContent {
     line-height: 32px;
+}
+.itemContent p {
+    text-indent: 2em
 }
 .listMenu {
     position: fixed;

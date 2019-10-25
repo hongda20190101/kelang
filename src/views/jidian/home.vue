@@ -131,7 +131,6 @@
       top: 20%;
   }
   .main .content .buttons {
-      width: 1200px;
       margin: 0 auto;
       padding-top: 20px;
   }

@@ -10,7 +10,11 @@
                     <el-menu :mode="isMobile ? 'vertical' : 'horizontal'" v-show="showMenu" router :default-active="activeIndex" @select="isMobile ? showMenu = !showMenu : ''">
                         <el-menu-item index="/jidian/">首页</el-menu-item>
                         <el-menu-item index="/jidian/profile?id=product">产品中心</el-menu-item>
-                        <el-menu-item index="/jidian/profile?id=news">新闻中心</el-menu-item>
+                        <el-submenu index="2">
+                            <template slot="title">新闻中心</template>
+                            <el-menu-item index="/jidian/profile?id=news&newid=0">smagister活器官培训系统发布会</el-menu-item>
+                            <el-menu-item index="/jidian/profile?id=news&newid=1">奇点医药勇夺中国创新创业大赛生物医药行业冠军</el-menu-item>
+                        </el-submenu>
                         <el-menu-item index="/jidian/profile?id=contactUs">联系我们</el-menu-item>
                     </el-menu>
                 </el-collapse-transition>
@@ -51,7 +55,7 @@
                 </el-row>
             </div>
             <div class="footer-bottom">
-                <p>奇点医疗<br>苏ICP备15008XXX号</p>
+                <p>奇点医疗<br>粤ICP备19095553号</p>
             </div>
         </el-footer>
     </el-container>
